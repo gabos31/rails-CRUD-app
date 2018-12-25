@@ -18,6 +18,6 @@ notifications:
 deploy:
   provider: heroku
   api_key:
-    secure: 50d15a0e-cd93-42a7-aced-d045a1c974a1
+    secure: $HEROKU_KEY
   app: rails-crud-g31
   run: bundle exec rails db:migrate
