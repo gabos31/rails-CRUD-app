@@ -1,24 +1,5 @@
-# README
+# Simple Users Mangment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[![Build Status](https://travis-ci.org/gabos31/rails-CRUD-app.svg?branch=master)](https://travis-ci.org/gabos31/rails-CRUD-app)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a9c12a53943309016656/maintainability)](https://codeclimate.com/github/gabos31/rails-CRUD-app/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/a9c12a53943309016656/test_coverage)](https://codeclimate.com/github/gabos31/rails-CRUD-app/test_coverage)
