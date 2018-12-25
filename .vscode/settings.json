@@ -1,0 +1,20 @@
+{
+  "ruby.lint": {
+    "ruby": {
+      "unicode": true //Runs ruby -wc -Ku
+    },
+    "reek": true,
+    "rubocop": {
+      "lint": true,
+      "rails": true
+    },
+    "fasterer": true,
+    "debride": {
+      "rails": true //Add some rails call conversions.
+    },
+    "ruby-lint": true
+  },
+  "ruby.locate": {
+    "include": "**/*.rb"
+  }
+}

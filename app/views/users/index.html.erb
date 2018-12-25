@@ -1,0 +1,19 @@
+<table class="table table-stripped table-hover">
+  <caption>List of Users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Full Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do |user, i| %>
+      <tr>
+        <th scope="row"><%= i + 1 %></th>
+        <td><%= link_to user.full_name, user_path(user) %></td>
+        <td><%= user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

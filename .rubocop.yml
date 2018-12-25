@@ -1,0 +1,41 @@
+Rails:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/Semicolon:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/ClassLength:
+  Max: 150
+
+Rails/OutputSafety:
+  Exclude:
+    - config/initializers/customize_error.rb
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - test/test_helper.rb
+
+AllCops:
+  Exclude:
+    - db/schema.rb

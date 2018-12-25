@@ -1,0 +1,33 @@
+<div class="card bg-light shadow-sm d-flex mt-3">
+  <div class="card-header">
+    <h1><%= @user.full_name %></h1>
+  </div>
+  <div class="card-body">
+    <table class="table table-borderless table-sm">
+    <tbody>
+      <tr>
+        <th scope="row" style="width: 10%">Email:</th>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <th scope="row">First Name:</th>
+        <td><%= @user.first_name %></td>
+      </tr>
+      <tr>
+        <th scope="row">Last Name:</th>
+        <td><%= @user.last_name %></td>
+      </tr>
+      <tr>
+        <th scope="row">Id:</th>
+        <td><%= @user.id %></td>
+      </tr>
+    </tbody>
+  </table>
+  <% if auth_user? %>
+    <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-outline-primary btn-lg m-2" %>
+    <%= link_to 'Change password', edit_password_user_path(@user), class: "btn btn-outline-primary btn-lg m-2" %>
+    <%= link_to 'Delete Account', user_path(@user), class: "btn btn-outline-danger btn-lg m-2",
+                                  method: :delete, rel: "nofollow", data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  </div>
+</div>

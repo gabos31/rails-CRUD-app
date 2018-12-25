@@ -1,0 +1,10 @@
+<%= floating_form_with model: @user do |form| %>
+  <%= form.text_field :email, 'Email address', autofocus: true, required: true %>
+  <% if is_action_new %>
+    <%= form.text_field :password, 'Password', type: 'password', required: true %>
+    <%= form.text_field :password_confirmation, 'Password confirmation', type: 'password' %>
+  <% end %>
+  <%= form.text_field :first_name, 'First name (optional)' %>
+  <%= form.text_field :last_name, 'Last name (optional)' %>
+  <%= yield %>
+<% end %>

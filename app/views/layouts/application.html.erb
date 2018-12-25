@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crud</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="bg-light" style="min-height: 100vh">
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color: #216a96"><%= link_to 'Simple Users Managment', root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><%= link_to 'Users', users_path, class: "nav-link" %></li>
+        </ul>
+        <ul class="navbar-nav">
+          <% if @user_id %>
+            <li class="nav-item"><%= link_to 'My Profile', user_path(@user_id), class: "nav-link" %>
+            <li class="nav-item"><%= link_to 'Sign Out', session_path, method: :delete, rel: "nofollow", class: "nav-link" %>
+          <% else %>
+            <li class="nav-item"><%= link_to 'Sign In', new_session_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to 'Sign Up', new_user_path, class: "nav-link" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <main class="container mt-4">
+      <%= render 'welcome/flash' %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

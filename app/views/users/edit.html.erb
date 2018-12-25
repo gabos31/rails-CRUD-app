@@ -1,0 +1,11 @@
+<div class="card bg-light shadow-sm d-flex mt-3">
+  <div class="card-header">
+    <h1><%= @user.full_name %></h1>
+  </div>
+  <div class="card-body">
+    <%= render "form", model: @user, is_action_new: false do %>
+      <button class="btn btn-outline-primary btn-lg m-2" type="submit">Save</button>
+      <%= link_to 'Cancel', user_path(@user), class: "btn btn-outline-danger btn-lg m-2" %>
+    <% end %>
+  </div>
+</div>
