@@ -1,6 +1,12 @@
 Rails:
   Enabled: true
 
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - db/schema.rb
+    - vendor/bundle/**/*
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -35,8 +41,3 @@ Rails/OutputSafety:
 Style/ClassAndModuleChildren:
   Exclude:
     - test/test_helper.rb
-
-AllCops:
-  Exclude:
-    - db/schema.rb
-  TargetRubyVersion: 2.5
