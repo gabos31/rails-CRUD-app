@@ -49,9 +49,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test, :deployment do
+group :test do
   gem 'faker', '~> 1.6', '>= 1.6.6'
-  gem 'rubocop'
+  gem 'rubocop', require: false
   gem 'simplecov', require: false
   gem 'sqlite3'
   # Adds support for Capybara system testing and selenium driver
@@ -60,7 +60,6 @@ group :test, :deployment do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
