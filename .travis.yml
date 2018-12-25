@@ -14,3 +14,10 @@ after_script:
 
 notifications:
   email: false
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: 50d15a0e-cd93-42a7-aced-d045a1c974a1
+  app: rails-crud-g31
+  run: bundle exec rails db:migrate
